@@ -59,10 +59,10 @@ section {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                width: 70%;
+                width: 70% ;
 
                 & img {
-                    white-space: 100%;
+                    white-space: 50%;
                     transform: rotate(-30deg);
                 }
             }
@@ -205,6 +205,7 @@ section {
         & .item {
             transform: translateX(100vw);
             transition: 0.5s;
+            opacity: 0;
 
             & .car-img {
                 & img {
@@ -224,6 +225,7 @@ section {
                     transform: translateX(200px);
                     transition: 0.7s;
                     transition-delay: 0.3s;
+                    opacity: 0;
                 }
 
                 & h2 {
@@ -236,6 +238,32 @@ section {
 
                 & .information {
                     transition-delay: 0.9s;
+                }
+            }
+        }
+
+        & .active {
+            transform: translateX(0vw);
+            transition: 0.5s;
+            opacity: 1;
+
+            & .car-img {
+                & img {
+                    transform: rotate(-20deg);
+
+
+                }
+            }
+
+            & .content {
+
+                & .car-information,
+                h2,
+                .description,
+                .information {
+                    transform: translateX(0px);
+                    opacity: 1;
+
                 }
             }
         }
