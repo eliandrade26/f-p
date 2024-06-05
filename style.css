@@ -37,6 +37,11 @@ header {
         & ul {
             display: grid;
             grid-template-columns: repeat(3, 200px);
+            
+            & li{
+                color: #000;
+                font-weight: bold;
+            }
         }
     }
 }
@@ -86,16 +91,17 @@ section {
             }
 
             & h2 {
-                font-size: 8em;
+                font-size: 12em;
                 line-height: 1em;
                 font-family: "League Gothic", sans-serif;
             }
 
             & .description {
-                color: #dadada;
+                color: #0e0d0d;
                 font-size: 12px;
                 text-align: right;
                 max-width: 400px;
+                font-weight: bolder;
             }
 
             & .information {
