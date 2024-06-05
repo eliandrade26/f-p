@@ -29,7 +29,8 @@ header {
     z-index: 2;
 
     & img {
-        width: 250px;
+        width: 100px;
+        
     }
 
     & nav {
@@ -41,7 +42,7 @@ header {
 }
 
 section {
-    background-image: radial-gradient(#7f3d9e, #6d00d9);
+    background-image: radial-gradient(#faa404, #d98200);
     height: 100vh;
     position: relative;
 
@@ -64,6 +65,7 @@ section {
                 & img {
                     white-space: 50%;
                     transform: rotate(-30deg);
+                    
                 }
             }
         }
@@ -101,8 +103,8 @@ section {
                 height: 35px;
                 width: 120px;
                 text-transform: uppercase;
-                border: 2px solid #791fd3;
-                background-color: #beff1b;
+                border: 2px solid #f59505;
+                background-color: #ffffff;
                 cursor: pointer;
                 color: #000;
                 font-weight: bold;
@@ -162,7 +164,7 @@ section {
 
     .indicators {
         position: absolute;
-        top: 50%;
+        top: 55%;
         height: 200px;
         width: 90vw;
         left: 50%;
@@ -170,23 +172,28 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: end;
-        gap: 15px;
+        gap: 5px;
+        
 
         & .number {
             font-size: 5em;
             font-family: "League Gothic", sans-serif;
+            
         }
 
         & ul {
             display: flex;
             gap: 10px;
+           
 
             & li {
                 width: 40px;
                 height: 5px;
-                background-color: #beff1b;
+                background-color: #ffaf1b;
                 border-radius: 5px;
                 transition: 0.5;
+                
+               
             }
 
             & .active {
@@ -226,12 +233,17 @@ section {
                     transition: 0.7s;
                     transition-delay: 0.3s;
                     opacity: 0;
+                   
                 }
 
                 & h2 {
                     transition-delay: 0.5s;
                 }
-
+                & p{
+                    
+                    font-size: 20px;
+                   
+                }
                 & .description {
                     transition-delay: 0.7s;
                 }
