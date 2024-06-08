@@ -70,7 +70,7 @@ section {
                 width: 70%;
 
                 & img {
-                    white-space: 50%;
+                    white-space: 70%;
                     transform: rotate(-30deg);
 
                 }
@@ -89,22 +89,23 @@ section {
             }
         }
 
-        & .content {
+        & .content {/*ESTILIZAÇÃO DOS TEXTOS*/
             position: absolute;
             right: 100px;
-            width: 70%;
+            width: 100%;
             height: 100%;
             display: flex;
+           
             flex-direction: column;
             justify-content: center;
             align-items: end;
             gap: 50px;
 
-            & .car-information {
+            & .car-information {/* SEM NADA NESTE ESPAÇO*/
                 font-weight: bold;
             }
 
-            & h2 {
+            & h2 {/*ESTILIZAÇÃO TEXTO PRINCIPAL*/
                 font-size: 10em;
                 line-height: 1em;
                 font-family: "League Gothic", sans-serif;
@@ -120,7 +121,7 @@ section {
 
             }
 
-            & .information {
+            & .information {/*ESTILIZAÇÃO DO BOTAO SAIBA MAIS*/
                 /* SAIBA MAIS */
                 border-radius: 30px;
                 height: 35px;
@@ -138,7 +139,7 @@ section {
 
         }
 
-        &::before {
+        &::before {/*ESTILIZAÇÃO DAS LINHAS*/
             content: '';
             position: absolute;
             height: 200px;
@@ -151,7 +152,7 @@ section {
     }
 
 
-    .arrow {
+    .arrow { /* ESTILIZAÇÃO DAS CIRCUNFERENCIA DAS SETAS*/
         width: 82vw;
         position: absolute;
         top: 50%;
@@ -168,7 +169,7 @@ section {
 
         }
 
-        & button {
+        & button { /* ESTILIZAÇÃO DOS BOTOES DAS SETAS*/
             top: 70%;
             width: 50px;
             height: 50px;
@@ -176,7 +177,7 @@ section {
             border: none;
             cursor: pointer;
 
-            & img {
+            & img { /* IMAGEM DAS SETAS*/
                 width: 30px;
                 margin-top: 5px;
 
@@ -191,8 +192,9 @@ section {
 
 
     .indicators {
+        /*ESTILIZAÇÃO DO LOCAL DA DIV QUE ENVOLVE OS NUMEROS E AS BARRAS*/
         position: absolute;
-        top: 58%;
+        top: 69%;
         height: 100px;
         width: 90vw;
         left: 50%;
@@ -210,11 +212,13 @@ section {
         }
 
         & ul {
+            /* ESTILIZAÇÃO DA UL BARRAS*/
             display: flex;
             gap: 10px;
 
 
             & li {
+                /*ESTILIZAÇÃO DAS BARRAS DOS NUMEROS*/
                 width: 40px;
                 height: 5px;
                 background-color: #ffaf1b;
@@ -225,6 +229,7 @@ section {
             }
 
             & .active {
+                /* COR DA TRANSIÇÃO DOS NUMEROS*/
 
                 background-color: #fff;
             }
@@ -236,6 +241,7 @@ section {
 }
 
 section {
+    /*ANIMAÇÕES */
 
     & .list {
 
@@ -314,4 +320,3 @@ section {
         }
     }
 }
-
