@@ -89,23 +89,25 @@ section {
             }
         }
 
-        & .content {/*ESTILIZAÇÃO DOS TEXTOS*/
+        & .content {
+            /*ESTILIZAÇÃO DOS TEXTOS*/
             position: absolute;
             right: 100px;
             width: 100%;
             height: 100%;
             display: flex;
-           
             flex-direction: column;
             justify-content: center;
             align-items: end;
             gap: 50px;
 
-            & .car-information {/* SEM NADA NESTE ESPAÇO*/
+            & .car-information {
+                /* SEM NADA NESTE ESPAÇO*/
                 font-weight: bold;
             }
 
-            & h2 {/*ESTILIZAÇÃO TEXTO PRINCIPAL*/
+            & h2 {
+                /*ESTILIZAÇÃO TEXTO PRINCIPAL*/
                 font-size: 10em;
                 line-height: 1em;
                 font-family: "League Gothic", sans-serif;
@@ -121,8 +123,9 @@ section {
 
             }
 
-            & .information {/*ESTILIZAÇÃO DO BOTAO SAIBA MAIS*/
-                /* SAIBA MAIS */
+            & .information {
+                /*ESTILIZAÇÃO DO BOTAO SAIBA MAIS*/
+
                 border-radius: 30px;
                 height: 35px;
                 width: 120px;
@@ -139,7 +142,8 @@ section {
 
         }
 
-        &::before {/*ESTILIZAÇÃO DAS LINHAS*/
+        &::before {
+            /*ESTILIZAÇÃO DAS LINHAS*/
             content: '';
             position: absolute;
             height: 200px;
@@ -152,7 +156,8 @@ section {
     }
 
 
-    .arrow { /* ESTILIZAÇÃO DAS CIRCUNFERENCIA DAS SETAS*/
+    .arrow {
+        /* ESTILIZAÇÃO DAS CIRCUNFERENCIA DAS SETAS*/
         width: 82vw;
         position: absolute;
         top: 50%;
@@ -169,7 +174,8 @@ section {
 
         }
 
-        & button { /* ESTILIZAÇÃO DOS BOTOES DAS SETAS*/
+        & button {
+            /* ESTILIZAÇÃO DOS BOTOES DAS SETAS*/
             top: 70%;
             width: 50px;
             height: 50px;
@@ -177,7 +183,8 @@ section {
             border: none;
             cursor: pointer;
 
-            & img { /* IMAGEM DAS SETAS*/
+            & img {
+                /* IMAGEM DAS SETAS*/
                 width: 30px;
                 margin-top: 5px;
 
@@ -321,7 +328,9 @@ section {
     }
 }
 
-@media screen and (max-width: 1238px) {
+
+
+@media screen and (max-width: 1000px) {
 
     header {
         /* Menu*/
@@ -337,7 +346,6 @@ section {
 
         & img {
             width: 100px;
-
         }
     }
 
@@ -353,12 +361,10 @@ section {
             margin: auto;
             position: relative;
 
-
             & .item {
 
                 position: absolute;
                 inset: 0;
-
 
                 & .car-img {
                     position: absolute;
@@ -372,10 +378,7 @@ section {
                         white-space: 50%;
                         transform: rotate(-30deg);
                         width: 70%;
-
                     }
-
-
                 }
             }
 
@@ -391,7 +394,6 @@ section {
                     font-size: 100px;
                     line-height: 0em;
                     font-family: "League Gothic", sans-serif;
-
                 }
 
                 & .description {
@@ -402,8 +404,6 @@ section {
                     max-width: 300px;
                     font-weight: bolder;
                     margin-top: 0%;
-
-
                 }
 
                 & .information {
@@ -422,10 +422,7 @@ section {
                     font-size: 20px;
 
                 }
-
             }
-
-
         }
     }
 
@@ -508,406 +505,218 @@ section {
             }
         }
     }
+}
 
-    @media screen and (max-width: 1238px) {
 
-        header {
-            /* Menu*/
-            position: fixed;
-            left: 50%;
-            transform: translateX(-50%);
-            display: grid;
-            grid-template-columns: 1fr 600px;
-            /* 1° tela 1fração 2°tela 600px*/
-            gap: 5%;
-            align-items: center;
-            z-index: 2;
+@media screen and (max-width: 550px) {
 
-            & img {
-                width: 100px;
+    header {
+        /* Menu*/
+        display: flex;
+        width: 100%;
+        z-index: 2;
+
+        & img {
+            width: 10%;
+
+        }
+
+        & nav {
+            & ul {
+                display: flex;
+                gap: 80%;
+            }
+        }
+    }
+
+    section {
+        background-image: radial-gradient(#faa404, #d98200);
+        height: 100vh;
+        position: relative;
+
+        & .list {
+
+            width: 80vw;
+            height: 100%;
+            position: relative;
+
+            & .item {
+
+                position: absolute;
+                inset: 0;
+
+                & .car-img {
+                    position: absolute;
+                    top: 40%;
+
+                    width: 70%;
+                    display: flex;
+
+                    & img {
+                        white-space: 50%;
+                        transform: rotate(-30deg);
+                        width: 80%;
+
+                    }
+                }
+            }
+
+
+            & .content {
+                position: absolute;
+                width: 70%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: end;
+
+
+
+                & car.car-information {
+                    display: none;
+                }
+
+                & h2 {
+                    font-size: 50px;
+                    
+                }
+
+                & .description {
+                    /* PARAGRAFO SOBRE TELEFONE */
+                    color: #0e0d0d;
+                    text-align: center;
+                    width: 100%;
+                    margin-top: 80%;
+                    
+                    & p{
+                        font-size: 1px;
+                    }
+
+                }
+
+                &.information {}
+
+            }
+
+            &::before {
+                /* ESTILIZAÇÃO LINHAS */
+                content: '';
+                position: absolute;
+                height: 200px;
+                width: 100%;
+                top: 40%;
+                border-top: 1px solid #fff;
             }
         }
 
-        section {
-            background-image: radial-gradient(#faa404, #d98200);
-            height: 100vh;
-            position: relative;
+        .arrow {
+            width: 82vw;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+        }
 
-            & .list {
+        .indicators {
+            /* ESTILIZAÇÃO DA CAIXA DE NUMEROS */
+            position: absolute;
+            top: 42%;
+            height: 200px;
+            width: 50vw;
+            left: 30%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            
 
-                width: 80vw;
-                height: 100%;
-                margin: auto;
-                position: relative;
+            & .number {
+                font-size: 3em;
+                font-family: "League Gothic", sans-serif;
 
-                & .item {
+            }
+        }
 
-                    position: absolute;
-                    inset: 0;
+    }
 
-                    & .car-img {
-                        position: absolute;
-                        top: 52%;
-                        transform: translateY(-50%);
-                        width: 70%;
+    section {
 
-                        justify-content: center;
+        & .list {
 
-                        & img {
-                            white-space: 50%;
-                            transform: rotate(-30deg);
-                            width: 70%;
-                        }
+            --calculation: 1;
+
+            & .item {
+                transform: translateX(calc(100vw * var(--calculation)));
+                transition: 0.5s;
+                opacity: 0;
+
+                & .car-img {
+                    & img {
+                        transform: rotate(0);
+                        transition: 0.5s;
+                        transition-delay: 0.3s;
+
                     }
                 }
 
                 & .content {
-                    height: 100%;
 
-                    & .car-information {}
+                    & .car-information,
+                    h2,
+                    .description,
+                    .information {
+                        transform: translateX(calc(200px * var(--calculation)));
+                        transition: 0.7s;
+                        transition-delay: 0.3s;
+                        opacity: 0;
+
+                    }
 
                     & h2 {
-                        display: flex;
-                        width: 100%;
-                        justify-content: flex-end;
-                        font-size: 100px;
-                        line-height: 0em;
-                        font-family: "League Gothic", sans-serif;
+                        transition-delay: 0.5s;
                     }
 
-                    & .description {
-                        /* PARAGRAFO SOBRE TELEFONE */
-                        color: #090909;
-                        font-size: 10px;
-                        text-align: end;
-                        max-width: 300px;
-                        font-weight: bolder;
-                        margin-top: 0%;
-                    }
+                    & p {
 
-                    & .information {
-                        /* SAIBA MAIS */
-
-                        border-radius: 30px;
-                        height: 35px;
-                        width: 120px;
-                        text-transform: uppercase;
-                        border: 2px solid #f59505;
-                        background-color: #ffffff;
-                        cursor: pointer;
-                        color: #000;
-                        font-weight: bold;
-                        font-family: "League Gothic", sans-serif;
                         font-size: 20px;
 
                     }
-                }
-            }
-        }
 
-        section {
-
-            & .list {
-
-                --calculation: 1;
-
-                & .item {
-                    transform: translateX(calc(100vw * var(--calculation)));
-                    transition: 0.5s;
-                    opacity: 0;
-
-                    & .car-img {
-                        & img {
-                            transform: rotate(0);
-                            transition: 0.5s;
-                            transition-delay: 0.3s;
-
-                        }
+                    & .description {
+                        transition-delay: 0.7s;
                     }
 
-                    & .content {
-
-                        & .car-information,
-                        h2,
-                        .description,
-                        .information {
-                            transform: translateX(calc(200px * var(--calculation)));
-                            transition: 0.7s;
-                            transition-delay: 0.3s;
-                            opacity: 0;
-
-                        }
-
-                        & h2 {
-                            transition-delay: 0.5s;
-                        }
-
-                        & p {
-
-                            font-size: 20px;
-
-                        }
-
-                        & .description {
-                            transition-delay: 0.7s;
-                        }
-
-                        & .information {
-                            transition-delay: 0.9s;
-                        }
-                    }
-                }
-
-                & .active {
-                    transform: translateX(0vw);
-                    transition: 0.5s;
-                    opacity: 1;
-
-                    & .car-img {
-                        & img {
-                            transform: rotate(-20deg);
-
-                        }
-                    }
-
-                    & .content {
-
-                        & .car-information,
-                        h2,
-                        .description,
-                        .information {
-                            transform: translateX(0px);
-                            opacity: 1;
-
-                        }
-                    }
-                }
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-
-            header {
-                /* Menu*/
-                display: flex;
-                width: 100%;
-                z-index: 2;
-
-                & img {
-                    width: 10%;
-
-                }
-            }
-
-            section {
-                background-image: radial-gradient(#faa404, #d98200);
-                height: 100vh;
-                position: relative;
-
-                & .list {
-
-                    width: 80vw;
-                    height: 100%;
-                    margin: auto;
-                    position: relative;
-
-
-                    & .item {
-
-                        position: absolute;
-                        inset: 0;
-
-
-                        & .car-img {
-                            position: absolute;
-                            top: 40%;
-                            transform: translateY(-50%);
-                            width: 70%;
-                            display: flex;
-                            justify-content: center;
-
-                            & img {
-                                white-space: 50%;
-                                transform: rotate(-30deg);
-                                width: 80%;
-
-                            }
-
-
-                        }
-                    }
-
-
-                    & .content {
-                        position: absolute;
-                        right: 100px;
-                        width: 70%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: end;
-                        gap: 40%;
-
-                        & .car-information {
-                            font-weight: bold;
-                        }
-
-                        & h2 {
-                            font-size: 80px;
-                            line-height: 1em;
-                            font-family: "League Gothic", sans-serif;
-                        }
-
-                        & .description {
-                            /* PARAGRAFO SOBRE TELEFONE */
-                            color: #0e0d0d;
-                            font-size: 10px;
-                            text-align: center;
-                            max-width: 400px;
-                            font-weight: bolder;
-
-                        }
-
-                        & .information {
-                            /* SAIBA MAIS */
-                            border-radius: 30px;
-                            height: 35px;
-                            width: 120px;
-                            text-transform: uppercase;
-                            border: 2px solid #f59505;
-                            background-color: #ffffff;
-                            cursor: pointer;
-                            color: #000;
-                            font-weight: bold;
-                            font-family: "League Gothic", sans-serif;
-                            font-size: 20px;
-
-                        }
-
-                    }
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        height: 200px;
-                        width: 100%;
-                        top: 40%;
-                        border-top: 1px solid #fff;
-                    }
-
-
-                }
-
-
-            }
-        }
-
-        section {
-
-            & .list {
-
-                --calculation: 1;
-
-                & .item {
-                    transform: translateX(calc(100vw * var(--calculation)));
-                    transition: 0.5s;
-                    opacity: 0;
-
-                    & .car-img {
-                        & img {
-                            transform: rotate(0);
-                            transition: 0.5s;
-                            transition-delay: 0.3s;
-
-                        }
-                    }
-
-                    & .content {
-
-                        & .car-information,
-                        h2,
-                        .description,
-                        .information {
-                            transform: translateX(calc(200px * var(--calculation)));
-                            transition: 0.7s;
-                            transition-delay: 0.3s;
-                            opacity: 0;
-
-                        }
-
-                        & h2 {
-                            transition-delay: 0.5s;
-                        }
-
-                        & p {
-
-                            font-size: 20px;
-
-                        }
-
-                        & .description {
-                            transition-delay: 0.7s;
-                        }
-
-                        & .information {
-                            transition-delay: 0.9s;
-                        }
-                    }
-                }
-
-                & .active {
-                    transform: translateX(0vw);
-                    transition: 0.5s;
-                    opacity: 1;
-
-                    & .car-img {
-                        & img {
-                            transform: rotate(-20deg);
-
-                        }
-                    }
-
-                    & .content {
-
-                        & .car-information,
-                        h2,
-                        .description,
-                        .information {
-                            transform: translateX(0px);
-                            opacity: 1;
-
-                        }
-
+                    & .information {
+                        transition-delay: 0.9s;
                     }
                 }
             }
 
-            .arrow {
-                width: 82vw;
-                position: absolute;
-                top: 40%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                display: flex;
-                justify-content: space-between;
-            }
+            & .active {
+                transform: translateX(0vw);
+                transition: 0.5s;
+                opacity: 1;
 
-            .indicators {
-                position: absolute;
-                top: 32%;
-                height: 200px;
-                width: 50vw;
-                left: 30%;
-                transform: translateX(-50%);
-                display: flex;
-                flex-direction: column;
-                justify-content: end;
-                gap: 5px;
+                & .car-img {
+                    & img {
+                        transform: rotate(-20deg);
 
-                & .number {
-                    font-size: 3em;
-                    font-family: "League Gothic", sans-serif;
+                    }
+                }
+
+                & .content {
+
+                    & .car-information,
+                    h2,
+                    .description,
+                    .information {
+                        transform: translateX(0px);
+                        opacity: 1;
+
+                    }
 
                 }
             }
