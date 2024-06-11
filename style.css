@@ -569,8 +569,7 @@ section {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-
-                justify-content: end;
+                align-items: center;
 
 
 
@@ -579,23 +578,19 @@ section {
                 }
 
                 & h2 {
-                    font-size: 50px;
-
-                    margin-top: 20%;
+                    font-size: 60px;
+                    width: 100%;
+                    margin-top: 10%;
                     height: 100%;
+                    justify-content: center;
 
                 }
 
                 & .description {
                     /* PARAGRAFO SOBRE TELEFONE */
                     color: #0e0d0d;
-                    text-align: center;
                     width: 200%;
-                    text-align: right;
-
-                    & p {
-                        font-size: 1px;
-                    }
+                    text-align: center;
 
                 }
 
@@ -627,7 +622,7 @@ section {
         .indicators {
             /* ESTILIZAÇÃO DA CAIXA DE NUMEROS */
             position: absolute;
-            top: 42%;
+            top: 33%;
             height: 200px;
             width: 50vw;
             left: 30%;
@@ -641,90 +636,290 @@ section {
                 /*numeros*/
                 font-size: 3em;
                 font-family: "League Gothic", sans-serif;
-                display: ;
+                
             }
         }
 
     }
 
-    section {
+}
 
-        & .list {
+@media screen and (max-width: 600px) {
 
-            --calculation: 1;
-
-            & .item {
-                transform: translateX(calc(100vw * var(--calculation)));
-                transition: 0.5s;
-                opacity: 0;
-
-                & .car-img {
-                    & img {
-                        transform: rotate(0);
-                        transition: 0.5s;
-                        transition-delay: 0.3s;
-
-                    }
-                }
-
-                & .content {
-
-                    & .car-information,
-                    h2,
-                    .description,
-                    .information {
-                        transform: translateX(calc(200px * var(--calculation)));
-                        transition: 0.7s;
-                        transition-delay: 0.3s;
-                        opacity: 0;
-
-                    }
-
-                    & h2 {
-                        transition-delay: 0.5s;
-                    }
-
-                    & p {
-
-                        font-size: 20px;
-
-                    }
-
-                    & .description {
-                        transition-delay: 0.7s;
-                    }
-
-                    & .information {
-                        transition-delay: 0.9s;
-                    }
-                }
-            }
-
-            & .active {
-                transform: translateX(0vw);
-                transition: 0.5s;
-                opacity: 1;
-
-                & .car-img {
-                    & img {
-                        transform: rotate(-20deg);
-
-                    }
-                }
-
-                & .content {
-
-                    & .car-information,
-                    h2,
-                    .description,
-                    .information {
-                        transform: translateX(0px);
-                        opacity: 1;
-
-                    }
-
+    header {
+        /* Menu*/
+        display: flex;
+        width: 100vw;
+        z-index: 2;
+        
+       
+        & img {
+            width: 10%;
+        }
+        & nav {
+            
+             & ul {
+              & li {
+                   
                 }
             }
         }
+    }
+
+    section {
+        background-image: radial-gradient(#faa404, #d98200);
+        min-height: 100vh;
+        position: relative;
+
+        & .list {
+
+            width: 80vw;
+            height: 100%;
+            position: relative;
+
+            & .item {
+
+                position: absolute;
+                inset: 0;
+
+                & .car-img {
+                    position: absolute;
+                    top: 40%;
+
+                    width: 70%;
+                    display: flex;
+
+                    & img {
+                        white-space: 50%;
+                        transform: rotate(-30deg);
+                        width: 80%;
+
+                    }
+                }
+            }
+
+
+            & .content {
+                position: absolute;
+                width: 70%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0px;
+
+                & car.car-information {
+                    display:none ;
+                }
+
+                & h2 {
+                    font-size: 60px;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+
+                & .description {
+                    /* PARAGRAFO SOBRE TELEFONE */
+                    color: #0e0d0d;
+                    width: 100%;
+                    text-align: center;
+                   
+                    
+                    
+                }
+                & .information {
+                    margin-bottom: 15%;
+                }
+               
+
+            }
+
+            &::before {
+                /* ESTILIZAÇÃO LINHAS */
+                content: '';
+                position: absolute;
+                height: 200px;
+                width: 100%;
+                top: 40%;
+                border-top: 1px solid #fff;
+            }
+        }
+
+        .arrow {
+            width: 82vw;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .indicators {
+            /* ESTILIZAÇÃO DA CAIXA DE NUMEROS */
+            position: absolute;
+            top: 45%;
+            height: 100px;
+            width: 50vw;
+            left: 30%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+
+            & .number {
+                /*numeros*/
+                font-size: 3em;
+                font-family: "League Gothic", sans-serif;
+                
+            }
+        }
+
+    }
+}
+@media screen and (max-width: 450px) {
+
+    header {
+        /* Menu*/
+        display: flex;
+        width: 100%;
+        z-index: 2;
+       
+        
+       
+        & img {
+            width: 5%;
+        }
+        & nav {
+            
+             & ul {
+              & li {
+                   
+                }
+            }
+        }
+    }
+
+    section {
+        background-image: radial-gradient(#faa404, #d98200);
+        height: 100vh;
+        position: relative;
+        
+        
+        & .list {
+
+            width: 80%;
+            height: 100%;
+            position: relative;
+
+            & .item {
+
+                position: absolute;
+                inset: 0;
+
+                & .car-img {
+                    position: absolute;
+                    top: 40%;
+
+                    width: 70%;
+                    display: flex;
+
+                    & img {
+                        white-space: 50%;
+                        transform: rotate(-30deg);
+                        width: 80%;
+
+                    }
+                }
+            }
+
+
+            & .content {
+                position: absolute;
+                width: 70%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                gap: 0px;
+
+                & car.car-information {
+                    display:none ;
+                }
+
+                & h2 {
+                    font-size: 60px;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+
+                & .description {
+                    /* PARAGRAFO SOBRE TELEFONE */
+                    color: #0e0d0d;
+                    width: 500%;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: right;
+                   
+                    
+                    
+                }
+                & .information {
+                    margin-bottom: 30%;
+                }
+               
+
+            }
+
+            &::before {
+                /* ESTILIZAÇÃO LINHAS */
+                content: '';
+                position: absolute;
+                height: 200px;
+                width: 100%;
+                top: 40%;
+                border-top: 1px solid #fff;
+            }
+        }
+
+        .arrow {
+            width: 82vw;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .indicators {
+            /* ESTILIZAÇÃO DA CAIXA DE NUMEROS */
+            position: absolute;
+            top: 45%;
+            height: 100px;
+            width: 50vw;
+            left: 30%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+
+            & .number {
+                /*numeros*/
+                font-size: 3em;
+                font-family: "League Gothic", sans-serif;
+                
+            }
+        }
+
     }
 }
