@@ -47,7 +47,7 @@ header {
 }
 
 section {
-    background-image: radial-gradient(#faa404, #d98200);
+    background-image: radial-gradient(#eca54c, #ff7a00);
     height: 100vh;
     position: relative;
 
@@ -797,8 +797,12 @@ section {
         & nav {
             
              & ul {
+                display: flex;
+                gap: 50px;
+                
+                
               & li {
-                   
+                
                 }
             }
         }
@@ -810,16 +814,21 @@ section {
         position: relative;
         
         
+        
         & .list {
 
             width: 80%;
             height: 100%;
             position: relative;
+            bottom: 10%;
+           
+            
 
             & .item {
 
                 position: absolute;
                 inset: 0;
+                
 
                 & .car-img {
                     position: absolute;
@@ -845,6 +854,9 @@ section {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
+                right: 50px;
+                
                 
                 gap: 0px;
 
@@ -856,8 +868,7 @@ section {
                     font-size: 60px;
                     width: 100%;
                     height: 100%;
-                    justify-content: center;
-                    align-items: center;
+                   ;
 
                 }
 
@@ -866,8 +877,8 @@ section {
                     color: #0e0d0d;
                     width: 500%;
                     text-align: center;
-                    justify-content: center;
-                    align-items: right;
+                    
+                    
                    
                     
                     
@@ -887,13 +898,14 @@ section {
                 width: 100%;
                 top: 40%;
                 border-top: 1px solid #fff;
+                
             }
         }
 
         .arrow {
             width: 82vw;
             position: absolute;
-            top: 40%;
+            top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
             display: flex;
@@ -903,7 +915,7 @@ section {
         .indicators {
             /* ESTILIZAÇÃO DA CAIXA DE NUMEROS */
             position: absolute;
-            top: 45%;
+            top: 35%;
             height: 100px;
             width: 50vw;
             left: 30%;
